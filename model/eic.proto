@@ -4,6 +4,71 @@ option go_package = "github.com/decibelcooper/proio/go-proio/model/eic";
 option java_package = "proio.model";
 option java_outer_classname = "Eic";
 
+message Particle {
+    repeated uint64 parent = 1;
+    repeated uint64 child = 2;
+    sint32 pdg = 3;
+    // position in mm and time in ns
+    XYZTDouble vertex = 4;
+    // momentum in GeV
+    XYZDouble p = 5;
+    // mass in GeV
+    double mass = 6;
+    float charge = 7;
+    XYZFloat spin = 8;
+}
+
+// simulation hit
+message SimHit {
+    // helper ID to circumvent volume lookup from global position during
+    // digitization
+    uint64 volumeid = 1;
+    // spatial in mm and time in ns
+    XYZTDouble globalprepos = 2;
+    // spatial in mm and time in ns
+    XYZTDouble globalpostpos = 3;
+    // energy in GeV
+    float edep = 4;
+    uint64 particleid = 5;
+}
+
+// reconstructed hit
+message ReconHit {
+    uint64 cellid = 1;
+    // energy in GeV
+    float edep = 2;
+    // Repeated uncertainty contributions are independent and imply a
+    // convolution of the distributions.
+    repeated UncertContrib edeperr = 3;
+    // spatial in mm and time in ns
+    XYZTDouble pos = 4;
+    // Repeated uncertainty contributions are independent and imply a
+    // convolution of the distributions.  For the case where uncertainties are
+    // specified in orthogonal directions, the convolution reduces to a
+    // product.
+    repeated UncertContrib poserr = 5;
+    repeated uint64 simhitid = 6;
+    // particle IDs responsible for energy deposition (fill only in the absence
+    // of corresponding simhitids)
+    repeated uint64 particleid = 7;
+}
+
+// uncertainty contribution
+message UncertContrib {
+    enum DistShape {
+        NORMAL = 0;
+        UNIFORM = 1;
+    }
+    DistShape shape = 1;
+    oneof scalar_vector {
+        float sigma = 2;
+        // A vector uncertainty contribution represents uncertainty in the
+        // direction of vector.  Spatial components are in mm, and time is in
+        // ns.
+        XYZTFloat vector = 3;
+    }
+}
+
 message XYZTInt {
     sint64 x = 1;
     sint64 y = 2;
@@ -41,31 +106,4 @@ message XYZFloat {
     float x = 1;
     float y = 2;
     float z = 3;
-}
-
-message Particle {
-    repeated uint64 parent = 1;
-    repeated uint64 child = 2;
-    sint32 pdg = 3;
-    // position in mm and time in ns
-    XYZTDouble vertex = 4;
-    // momentum in GeV
-    XYZDouble p = 5;
-    // mass in GeV
-    double mass = 6;
-    float charge = 7;
-    XYZFloat spin = 8;
-}
-
-message SimHit {
-    // helper ID to circumvent volume lookup from global position during
-    // digitization
-    uint64 volumeid = 1;
-    // position in mm and time in ns
-    XYZTDouble globalprepos = 2;
-    // position in mm and time in ns
-    XYZTDouble globalpostpos = 3;
-    // energy in GeV
-    float edep = 4;
-    uint64 particleid = 5;
 }

@@ -19,301 +19,32 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='proio/model/eic.proto',
   package='proio.model.eic',
   syntax='proto3',
-  serialized_pb=_b('\n\x15proio/model/eic.proto\x12\x0fproio.model.eic\"5\n\x07XYZTInt\x12\t\n\x01x\x18\x01 \x01(\x12\x12\t\n\x01y\x18\x02 \x01(\x12\x12\t\n\x01z\x18\x03 \x01(\x12\x12\t\n\x01t\x18\x04 \x01(\x12\"8\n\nXYZTDouble\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01t\x18\x04 \x01(\x01\"7\n\tXYZTFloat\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x12\t\n\x01t\x18\x04 \x01(\x02\")\n\x06XYZInt\x12\t\n\x01x\x18\x01 \x01(\x12\x12\t\n\x01y\x18\x02 \x01(\x12\x12\t\n\x01z\x18\x03 \x01(\x12\",\n\tXYZDouble\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"+\n\x08XYZFloat\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\"\xd1\x01\n\x08Particle\x12\x0e\n\x06parent\x18\x01 \x03(\x04\x12\r\n\x05\x63hild\x18\x02 \x03(\x04\x12\x0b\n\x03pdg\x18\x03 \x01(\x11\x12+\n\x06vertex\x18\x04 \x01(\x0b\x32\x1b.proio.model.eic.XYZTDouble\x12%\n\x01p\x18\x05 \x01(\x0b\x32\x1a.proio.model.eic.XYZDouble\x12\x0c\n\x04mass\x18\x06 \x01(\x01\x12\x0e\n\x06\x63harge\x18\x07 \x01(\x02\x12\'\n\x04spin\x18\x08 \x01(\x0b\x32\x19.proio.model.eic.XYZFloat\"\xa3\x01\n\x06SimHit\x12\x10\n\x08volumeid\x18\x01 \x01(\x04\x12\x31\n\x0cglobalprepos\x18\x02 \x01(\x0b\x32\x1b.proio.model.eic.XYZTDouble\x12\x32\n\rglobalpostpos\x18\x03 \x01(\x0b\x32\x1b.proio.model.eic.XYZTDouble\x12\x0c\n\x04\x65\x64\x65p\x18\x04 \x01(\x02\x12\x12\n\nparticleid\x18\x05 \x01(\x04\x42\x45\n\x0bproio.modelB\x03\x45icZ1github.com/decibelcooper/proio/go-proio/model/eicb\x06proto3')
+  serialized_pb=_b('\n\x15proio/model/eic.proto\x12\x0fproio.model.eic\"\xd1\x01\n\x08Particle\x12\x0e\n\x06parent\x18\x01 \x03(\x04\x12\r\n\x05\x63hild\x18\x02 \x03(\x04\x12\x0b\n\x03pdg\x18\x03 \x01(\x11\x12+\n\x06vertex\x18\x04 \x01(\x0b\x32\x1b.proio.model.eic.XYZTDouble\x12%\n\x01p\x18\x05 \x01(\x0b\x32\x1a.proio.model.eic.XYZDouble\x12\x0c\n\x04mass\x18\x06 \x01(\x01\x12\x0e\n\x06\x63harge\x18\x07 \x01(\x02\x12\'\n\x04spin\x18\x08 \x01(\x0b\x32\x19.proio.model.eic.XYZFloat\"\xa3\x01\n\x06SimHit\x12\x10\n\x08volumeid\x18\x01 \x01(\x04\x12\x31\n\x0cglobalprepos\x18\x02 \x01(\x0b\x32\x1b.proio.model.eic.XYZTDouble\x12\x32\n\rglobalpostpos\x18\x03 \x01(\x0b\x32\x1b.proio.model.eic.XYZTDouble\x12\x0c\n\x04\x65\x64\x65p\x18\x04 \x01(\x02\x12\x12\n\nparticleid\x18\x05 \x01(\x04\"\xd9\x01\n\x08ReconHit\x12\x0e\n\x06\x63\x65llid\x18\x01 \x01(\x04\x12\x0c\n\x04\x65\x64\x65p\x18\x02 \x01(\x02\x12/\n\x07\x65\x64\x65perr\x18\x03 \x03(\x0b\x32\x1e.proio.model.eic.UncertContrib\x12(\n\x03pos\x18\x04 \x01(\x0b\x32\x1b.proio.model.eic.XYZTDouble\x12.\n\x06poserr\x18\x05 \x03(\x0b\x32\x1e.proio.model.eic.UncertContrib\x12\x10\n\x08simhitid\x18\x06 \x03(\x04\x12\x12\n\nparticleid\x18\x07 \x03(\x04\"\xbe\x01\n\rUncertContrib\x12\x37\n\x05shape\x18\x01 \x01(\x0e\x32(.proio.model.eic.UncertContrib.DistShape\x12\x0f\n\x05sigma\x18\x02 \x01(\x02H\x00\x12,\n\x06vector\x18\x03 \x01(\x0b\x32\x1a.proio.model.eic.XYZTFloatH\x00\"$\n\tDistShape\x12\n\n\x06NORMAL\x10\x00\x12\x0b\n\x07UNIFORM\x10\x01\x42\x0f\n\rscalar_vector\"5\n\x07XYZTInt\x12\t\n\x01x\x18\x01 \x01(\x12\x12\t\n\x01y\x18\x02 \x01(\x12\x12\t\n\x01z\x18\x03 \x01(\x12\x12\t\n\x01t\x18\x04 \x01(\x12\"8\n\nXYZTDouble\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01t\x18\x04 \x01(\x01\"7\n\tXYZTFloat\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x12\t\n\x01t\x18\x04 \x01(\x02\")\n\x06XYZInt\x12\t\n\x01x\x18\x01 \x01(\x12\x12\t\n\x01y\x18\x02 \x01(\x12\x12\t\n\x01z\x18\x03 \x01(\x12\",\n\tXYZDouble\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\"+\n\x08XYZFloat\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\x12\t\n\x01z\x18\x03 \x01(\x02\x42\x45\n\x0bproio.modelB\x03\x45icZ1github.com/decibelcooper/proio/go-proio/model/eicb\x06proto3')
 )
 
 
 
-
-_XYZTINT = _descriptor.Descriptor(
-  name='XYZTInt',
-  full_name='proio.model.eic.XYZTInt',
+_UNCERTCONTRIB_DISTSHAPE = _descriptor.EnumDescriptor(
+  name='DistShape',
+  full_name='proio.model.eic.UncertContrib.DistShape',
   filename=None,
   file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NORMAL', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UNIFORM', index=1, number=1,
+      options=None,
+      type=None),
+  ],
   containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='x', full_name='proio.model.eic.XYZTInt.x', index=0,
-      number=1, type=18, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='y', full_name='proio.model.eic.XYZTInt.y', index=1,
-      number=2, type=18, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='proio.model.eic.XYZTInt.z', index=2,
-      number=3, type=18, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='t', full_name='proio.model.eic.XYZTInt.t', index=3,
-      number=4, type=18, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
   options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=42,
-  serialized_end=95,
+  serialized_start=778,
+  serialized_end=814,
 )
-
-
-_XYZTDOUBLE = _descriptor.Descriptor(
-  name='XYZTDouble',
-  full_name='proio.model.eic.XYZTDouble',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='x', full_name='proio.model.eic.XYZTDouble.x', index=0,
-      number=1, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='y', full_name='proio.model.eic.XYZTDouble.y', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='proio.model.eic.XYZTDouble.z', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='t', full_name='proio.model.eic.XYZTDouble.t', index=3,
-      number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=97,
-  serialized_end=153,
-)
-
-
-_XYZTFLOAT = _descriptor.Descriptor(
-  name='XYZTFloat',
-  full_name='proio.model.eic.XYZTFloat',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='x', full_name='proio.model.eic.XYZTFloat.x', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='y', full_name='proio.model.eic.XYZTFloat.y', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='proio.model.eic.XYZTFloat.z', index=2,
-      number=3, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='t', full_name='proio.model.eic.XYZTFloat.t', index=3,
-      number=4, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=155,
-  serialized_end=210,
-)
-
-
-_XYZINT = _descriptor.Descriptor(
-  name='XYZInt',
-  full_name='proio.model.eic.XYZInt',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='x', full_name='proio.model.eic.XYZInt.x', index=0,
-      number=1, type=18, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='y', full_name='proio.model.eic.XYZInt.y', index=1,
-      number=2, type=18, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='proio.model.eic.XYZInt.z', index=2,
-      number=3, type=18, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=212,
-  serialized_end=253,
-)
-
-
-_XYZDOUBLE = _descriptor.Descriptor(
-  name='XYZDouble',
-  full_name='proio.model.eic.XYZDouble',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='x', full_name='proio.model.eic.XYZDouble.x', index=0,
-      number=1, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='y', full_name='proio.model.eic.XYZDouble.y', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='proio.model.eic.XYZDouble.z', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=255,
-  serialized_end=299,
-)
-
-
-_XYZFLOAT = _descriptor.Descriptor(
-  name='XYZFloat',
-  full_name='proio.model.eic.XYZFloat',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='x', full_name='proio.model.eic.XYZFloat.x', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='y', full_name='proio.model.eic.XYZFloat.y', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='z', full_name='proio.model.eic.XYZFloat.z', index=2,
-      number=3, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=301,
-  serialized_end=344,
-)
+_sym_db.RegisterEnumDescriptor(_UNCERTCONTRIB_DISTSHAPE)
 
 
 _PARTICLE = _descriptor.Descriptor(
@@ -391,8 +122,8 @@ _PARTICLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=347,
-  serialized_end=556,
+  serialized_start=43,
+  serialized_end=252,
 )
 
 
@@ -450,8 +181,421 @@ _SIMHIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=559,
-  serialized_end=722,
+  serialized_start=255,
+  serialized_end=418,
+)
+
+
+_RECONHIT = _descriptor.Descriptor(
+  name='ReconHit',
+  full_name='proio.model.eic.ReconHit',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='cellid', full_name='proio.model.eic.ReconHit.cellid', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='edep', full_name='proio.model.eic.ReconHit.edep', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='edeperr', full_name='proio.model.eic.ReconHit.edeperr', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pos', full_name='proio.model.eic.ReconHit.pos', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='poserr', full_name='proio.model.eic.ReconHit.poserr', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='simhitid', full_name='proio.model.eic.ReconHit.simhitid', index=5,
+      number=6, type=4, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='particleid', full_name='proio.model.eic.ReconHit.particleid', index=6,
+      number=7, type=4, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=421,
+  serialized_end=638,
+)
+
+
+_UNCERTCONTRIB = _descriptor.Descriptor(
+  name='UncertContrib',
+  full_name='proio.model.eic.UncertContrib',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='shape', full_name='proio.model.eic.UncertContrib.shape', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sigma', full_name='proio.model.eic.UncertContrib.sigma', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='vector', full_name='proio.model.eic.UncertContrib.vector', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _UNCERTCONTRIB_DISTSHAPE,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='scalar_vector', full_name='proio.model.eic.UncertContrib.scalar_vector',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=641,
+  serialized_end=831,
+)
+
+
+_XYZTINT = _descriptor.Descriptor(
+  name='XYZTInt',
+  full_name='proio.model.eic.XYZTInt',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='proio.model.eic.XYZTInt.x', index=0,
+      number=1, type=18, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='proio.model.eic.XYZTInt.y', index=1,
+      number=2, type=18, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='proio.model.eic.XYZTInt.z', index=2,
+      number=3, type=18, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='t', full_name='proio.model.eic.XYZTInt.t', index=3,
+      number=4, type=18, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=833,
+  serialized_end=886,
+)
+
+
+_XYZTDOUBLE = _descriptor.Descriptor(
+  name='XYZTDouble',
+  full_name='proio.model.eic.XYZTDouble',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='proio.model.eic.XYZTDouble.x', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='proio.model.eic.XYZTDouble.y', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='proio.model.eic.XYZTDouble.z', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='t', full_name='proio.model.eic.XYZTDouble.t', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=888,
+  serialized_end=944,
+)
+
+
+_XYZTFLOAT = _descriptor.Descriptor(
+  name='XYZTFloat',
+  full_name='proio.model.eic.XYZTFloat',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='proio.model.eic.XYZTFloat.x', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='proio.model.eic.XYZTFloat.y', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='proio.model.eic.XYZTFloat.z', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='t', full_name='proio.model.eic.XYZTFloat.t', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=946,
+  serialized_end=1001,
+)
+
+
+_XYZINT = _descriptor.Descriptor(
+  name='XYZInt',
+  full_name='proio.model.eic.XYZInt',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='proio.model.eic.XYZInt.x', index=0,
+      number=1, type=18, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='proio.model.eic.XYZInt.y', index=1,
+      number=2, type=18, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='proio.model.eic.XYZInt.z', index=2,
+      number=3, type=18, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1003,
+  serialized_end=1044,
+)
+
+
+_XYZDOUBLE = _descriptor.Descriptor(
+  name='XYZDouble',
+  full_name='proio.model.eic.XYZDouble',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='proio.model.eic.XYZDouble.x', index=0,
+      number=1, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='proio.model.eic.XYZDouble.y', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='proio.model.eic.XYZDouble.z', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1046,
+  serialized_end=1090,
+)
+
+
+_XYZFLOAT = _descriptor.Descriptor(
+  name='XYZFloat',
+  full_name='proio.model.eic.XYZFloat',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='x', full_name='proio.model.eic.XYZFloat.x', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='y', full_name='proio.model.eic.XYZFloat.y', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='z', full_name='proio.model.eic.XYZFloat.z', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1092,
+  serialized_end=1135,
 )
 
 _PARTICLE.fields_by_name['vertex'].message_type = _XYZTDOUBLE
@@ -459,15 +603,57 @@ _PARTICLE.fields_by_name['p'].message_type = _XYZDOUBLE
 _PARTICLE.fields_by_name['spin'].message_type = _XYZFLOAT
 _SIMHIT.fields_by_name['globalprepos'].message_type = _XYZTDOUBLE
 _SIMHIT.fields_by_name['globalpostpos'].message_type = _XYZTDOUBLE
+_RECONHIT.fields_by_name['edeperr'].message_type = _UNCERTCONTRIB
+_RECONHIT.fields_by_name['pos'].message_type = _XYZTDOUBLE
+_RECONHIT.fields_by_name['poserr'].message_type = _UNCERTCONTRIB
+_UNCERTCONTRIB.fields_by_name['shape'].enum_type = _UNCERTCONTRIB_DISTSHAPE
+_UNCERTCONTRIB.fields_by_name['vector'].message_type = _XYZTFLOAT
+_UNCERTCONTRIB_DISTSHAPE.containing_type = _UNCERTCONTRIB
+_UNCERTCONTRIB.oneofs_by_name['scalar_vector'].fields.append(
+  _UNCERTCONTRIB.fields_by_name['sigma'])
+_UNCERTCONTRIB.fields_by_name['sigma'].containing_oneof = _UNCERTCONTRIB.oneofs_by_name['scalar_vector']
+_UNCERTCONTRIB.oneofs_by_name['scalar_vector'].fields.append(
+  _UNCERTCONTRIB.fields_by_name['vector'])
+_UNCERTCONTRIB.fields_by_name['vector'].containing_oneof = _UNCERTCONTRIB.oneofs_by_name['scalar_vector']
+DESCRIPTOR.message_types_by_name['Particle'] = _PARTICLE
+DESCRIPTOR.message_types_by_name['SimHit'] = _SIMHIT
+DESCRIPTOR.message_types_by_name['ReconHit'] = _RECONHIT
+DESCRIPTOR.message_types_by_name['UncertContrib'] = _UNCERTCONTRIB
 DESCRIPTOR.message_types_by_name['XYZTInt'] = _XYZTINT
 DESCRIPTOR.message_types_by_name['XYZTDouble'] = _XYZTDOUBLE
 DESCRIPTOR.message_types_by_name['XYZTFloat'] = _XYZTFLOAT
 DESCRIPTOR.message_types_by_name['XYZInt'] = _XYZINT
 DESCRIPTOR.message_types_by_name['XYZDouble'] = _XYZDOUBLE
 DESCRIPTOR.message_types_by_name['XYZFloat'] = _XYZFLOAT
-DESCRIPTOR.message_types_by_name['Particle'] = _PARTICLE
-DESCRIPTOR.message_types_by_name['SimHit'] = _SIMHIT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+Particle = _reflection.GeneratedProtocolMessageType('Particle', (_message.Message,), dict(
+  DESCRIPTOR = _PARTICLE,
+  __module__ = 'proio.model.eic_pb2'
+  # @@protoc_insertion_point(class_scope:proio.model.eic.Particle)
+  ))
+_sym_db.RegisterMessage(Particle)
+
+SimHit = _reflection.GeneratedProtocolMessageType('SimHit', (_message.Message,), dict(
+  DESCRIPTOR = _SIMHIT,
+  __module__ = 'proio.model.eic_pb2'
+  # @@protoc_insertion_point(class_scope:proio.model.eic.SimHit)
+  ))
+_sym_db.RegisterMessage(SimHit)
+
+ReconHit = _reflection.GeneratedProtocolMessageType('ReconHit', (_message.Message,), dict(
+  DESCRIPTOR = _RECONHIT,
+  __module__ = 'proio.model.eic_pb2'
+  # @@protoc_insertion_point(class_scope:proio.model.eic.ReconHit)
+  ))
+_sym_db.RegisterMessage(ReconHit)
+
+UncertContrib = _reflection.GeneratedProtocolMessageType('UncertContrib', (_message.Message,), dict(
+  DESCRIPTOR = _UNCERTCONTRIB,
+  __module__ = 'proio.model.eic_pb2'
+  # @@protoc_insertion_point(class_scope:proio.model.eic.UncertContrib)
+  ))
+_sym_db.RegisterMessage(UncertContrib)
 
 XYZTInt = _reflection.GeneratedProtocolMessageType('XYZTInt', (_message.Message,), dict(
   DESCRIPTOR = _XYZTINT,
@@ -510,20 +696,6 @@ XYZFloat = _reflection.GeneratedProtocolMessageType('XYZFloat', (_message.Messag
   # @@protoc_insertion_point(class_scope:proio.model.eic.XYZFloat)
   ))
 _sym_db.RegisterMessage(XYZFloat)
-
-Particle = _reflection.GeneratedProtocolMessageType('Particle', (_message.Message,), dict(
-  DESCRIPTOR = _PARTICLE,
-  __module__ = 'proio.model.eic_pb2'
-  # @@protoc_insertion_point(class_scope:proio.model.eic.Particle)
-  ))
-_sym_db.RegisterMessage(Particle)
-
-SimHit = _reflection.GeneratedProtocolMessageType('SimHit', (_message.Message,), dict(
-  DESCRIPTOR = _SIMHIT,
-  __module__ = 'proio.model.eic_pb2'
-  # @@protoc_insertion_point(class_scope:proio.model.eic.SimHit)
-  ))
-_sym_db.RegisterMessage(SimHit)
 
 
 DESCRIPTOR.has_options = True
